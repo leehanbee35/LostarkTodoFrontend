@@ -7,7 +7,7 @@ import '@toast-ui/editor/dist/i18n/ko-kr';
 import {useRef} from "react";
 import * as images from "../../../apis/images";
 
-function EditorBox({setContent, addFileNames}) {
+function EditorBox({setContent, addFileNames, setIsLoading}) {
     const editorRef = useRef();
 
     const onChange = () => {
@@ -16,12 +16,15 @@ function EditorBox({setContent, addFileNames}) {
 
     const onUploadImage = async (blob, callback) => {
         try {
+            setIsLoading(true);
             const data = await images.uploadImage(blob);
             addFileNames(data.fileName);
             callback(data.url, 'alt text');
             return false;
         } catch (e) {
             console.log(e);
+        } finally {
+            setIsLoading(false);
         }
     };
 

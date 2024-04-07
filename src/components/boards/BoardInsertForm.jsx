@@ -3,7 +3,7 @@ import EditorBox from "./components/EditorBox";
 import {Link, useNavigate} from "react-router-dom";
 import * as boards from "../../apis/boards";
 
-const BoardInsertForm = () => {
+const BoardInsertForm = ({setIsLoading}) => {
     // state 설정
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
@@ -37,7 +37,7 @@ const BoardInsertForm = () => {
                 </div>
                 <div className="boards-insert-content">
                     <p>내용</p>
-                    <EditorBox setContent={setContent} addFileNames={addFileNames}/>
+                    <EditorBox setContent={setContent} addFileNames={addFileNames} setIsLoading={setIsLoading}/>
                 </div>
                 <div>
                     <button onClick={() => onInsert(title, content)}>등록</button>

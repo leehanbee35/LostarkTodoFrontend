@@ -89,7 +89,7 @@ const App = () => {
                         {/* 게시글(공지사항) 관련 */}
                         <Route path='/boards' element={<BoardMain setIsLoading={setIsLoading}/>}/>
                         <Route path='/boards/:no' element={<Board/>}/>
-                        <Route path='/boards/insert' element={<BoardInsertForm/>}/>
+                        <Route path='/boards/insert' element={<BoardInsertForm setIsLoading={setIsLoading}/>}/>
                     </Routes>
                 </BrowserRouter>
                 {/* 구글 애드센스 */}
