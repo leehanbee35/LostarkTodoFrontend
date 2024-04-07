@@ -1,9 +1,7 @@
 import {API_BASE_URL} from "../config/api-config";
 
 export function call(api, method, request) {
-    let headers = new Headers({
-        "Content-Type": "application/json",
-    });
+    let headers = new Headers();
 
     // 로컬 스토리지에서 ACCESS TOKEN 가져오기
     const accessToken = localStorage.getItem("ACCESS_TOKEN");
@@ -17,22 +15,25 @@ export function call(api, method, request) {
         method: method,
     };
 
-    if (request) {
-        options.body = JSON.stringify(request);
+    if (request instanceof FormData) {
+        options.body = request;
+    } else {
+        headers.append("Content-Type", "application/json");
+        if (request) {
+            options.body = JSON.stringify(request);
+        }
     }
 
     return fetch(options.url, options).then((response) => {
-        if (response.status === 200 || response.status === 201) {
+        if (response.ok) {
             return response.json();
         } else if (response.status === 403) {
             // window.location.href = "/login";
-            throw response.json();
+            throw new Error("Forbidden");
         } else {
-            throw response.json();
+            throw new Error("Network response was not ok");
         }
     }).catch((error) => {
-        return error.then((errorMessage) => {
-            throw errorMessage;
-        });
+        throw error;
     });
 }

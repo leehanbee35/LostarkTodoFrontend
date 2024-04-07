@@ -57,7 +57,7 @@
 .board-container {
     max-width: 800px;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 80px;
     padding: 20px;
     background-color: #fff; /* White background for the board container */
     border: 1px solid #ddd; /* Add a subtle border */
@@ -110,4 +110,8 @@
 
 .board-content {
     line-height: 1.6;
+}
+
+.board-content img {
+    max-width: 100%;
 }

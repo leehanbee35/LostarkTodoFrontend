@@ -34,10 +34,11 @@ export const select = async (no) => {
 }
 
 /*등록*/
-export const insert = async (title, content) => {
+export const insert = async (title, content, fileNames) => {
     const updateContent = {
         title : title,
-        content : content
+        content : content,
+        fileNames : fileNames
     }
     try {
         const response = await call("/v3/boards", "POST", updateContent);
@@ -47,6 +48,7 @@ export const insert = async (title, content) => {
         throw error;
     }
 }
+
 
 // // 수정
 // export const update = (no, title, writerId, content) => axiosInstance.put("/boards", { no, title, writerId, content });

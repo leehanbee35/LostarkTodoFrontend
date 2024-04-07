@@ -17,6 +17,8 @@ import BoardMain from "./components/boards/BoardMain";
 import Board from "./components/boards/Board";
 import BoardInsert from "./components/boards/BoardInsert";
 import TodoMain from "./components/todo/TodoMain";
+import FriendMain from "./components/friendsV2/FriendMain";
+import BoardInsertForm from "./components/boards/BoardInsertForm";
 
 const App = () => {
     //Notification 관련
@@ -79,6 +81,7 @@ const App = () => {
                                         isDarkMode={isDarkMode} showMessage={showMessage}
                                         setLoginName={setLoginName} loginName={loginName}/>}
                         />
+                        <Route path='friends2' element={<FriendMain />}/>
                         <Route path='comments' element={<CommentListContainer setIsLoading={setIsLoading}/>}/>
                         <Route path='setting' element={<Setting/>}/>
                         <Route path='member/apikey' element={<ApiKeyUpdateForm/>}/>
@@ -86,7 +89,7 @@ const App = () => {
                         {/* 게시글(공지사항) 관련 */}
                         <Route path='/boards' element={<BoardMain setIsLoading={setIsLoading}/>}/>
                         <Route path='/boards/:no' element={<Board/>}/>
-                        <Route path='/boards/insert' element={<BoardInsert/>}/>
+                        <Route path='/boards/insert' element={<BoardInsertForm/>}/>
                     </Routes>
                 </BrowserRouter>
                 {/* 구글 애드센스 */}
