@@ -27,13 +27,12 @@ export function call(api, method, request) {
     return fetch(options.url, options).then((response) => {
         if (response.ok) {
             return response.json();
-        } else if (response.status === 403) {
-            // window.location.href = "/login";
-            throw new Error("Forbidden");
         } else {
-            throw new Error("Network response was not ok");
+            throw response.json();
         }
     }).catch((error) => {
-        throw error;
+        return error.then((errorMessage) => {
+            throw errorMessage;
+        });
     });
 }

@@ -6,7 +6,6 @@ export const list = async () => {
         const response = await call("/v3/member/characters", "GET", null);
         return response;
     } catch (error) {
-        console.log(error);
         throw error;
     }
 }
