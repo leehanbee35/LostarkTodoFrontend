@@ -52,8 +52,8 @@
     </script>
     <style>
       .ad-wrapper {
-        max-width: 728px;
         margin: 0 auto;
+        text-align: center;
       }
     </style>
     <title>LOA TODO</title>
@@ -63,18 +63,45 @@
     <noscript>구글 로그인 연동, 로스트아크 숙제 관리 사이트</noscript>
     <div id="root"></div>
     <div class="ad-wrapper">
-      <ins
-        class="kakao_ad_area"
-        style="display: none"
-        data-ad-unit="DAN-HhdsNXLVATZ6836E"
-        data-ad-width="728"
-        data-ad-height="90"
-      ></ins>
+      <div class="desktop-ad">
+        <ins
+          class="kakao_ad_area"
+          data-ad-unit="DAN-HhdsNXLVATZ6836E"
+          data-ad-width="728"
+          data-ad-height="90"
+        ></ins>
+      </div>
+      <div class="mobile-ad">
+        <ins
+          class="kakao_ad_area"
+          data-ad-unit="DAN-Mb4e1tojdnfrWcvK"
+          data-ad-width="320"
+          data-ad-height="250"
+        ></ins>
+      </div>
     </div>
     <script
       type="text/javascript"
-      src="//t1.daumcdn.net/kas/static/ba.min.js"
+      src="//t1.daumcdn.net/adfit/static/ad.min.js"
       async
     ></script>
+    <script>
+      function checkScreenWidth() {
+        var desktopAd = document.querySelector(".desktop-ad");
+        var mobileAd = document.querySelector(".mobile-ad");
+
+        if (window.innerWidth >= 1024) {
+          desktopAd.style.display = "block";
+          mobileAd.style.display = "none";
+        } else if (window.innerWidth <= 768) {
+          desktopAd.style.display = "none";
+          mobileAd.style.display = "block";
+        }
+      }
+
+      // Check screen width when the page loads and when it resizes
+      window.onload = checkScreenWidth;
+      window.onresize = checkScreenWidth;
+    </script>
   </body>
 </html>
