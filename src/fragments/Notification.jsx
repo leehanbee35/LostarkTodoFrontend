@@ -4,14 +4,14 @@ import MuiAlert from '@mui/material/Alert';
 import Slide from '@mui/material/Slide';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  return <MuiAlert elevation={6} ref={ref} {...props} />;
 });
 
 export default function Notification({ message, open, handleClose }) {
   return (
     <Snackbar
       open={open}
-      autoHideDuration={6000}
+      autoHideDuration={3000}
       onClose={handleClose}
       anchorOrigin={{
         vertical: 'top',
@@ -21,11 +21,12 @@ export default function Notification({ message, open, handleClose }) {
       TransitionProps={{
         direction: 'left',
       }}
-      style={{ position: 'fixed', zIndex: 9999, top:77, height:50 }}
+      message = {message}
+      style={{ position: 'fixed', top:77, height:50 }}
     >
-      <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+      {/* <Alert onClose={handleClose} severity="success">
         {message}
-      </Alert>
+      </Alert> */}
     </Snackbar>
   );
 }
