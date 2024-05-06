@@ -15,7 +15,6 @@ import SignUpCharacters from "./components/auth/SignUpCharacters";
 import HomeMain from "./components/home/HomeMain";
 import BoardMain from "./components/boards/BoardMain";
 import Board from "./components/boards/Board";
-import BoardInsert from "./components/boards/BoardInsert";
 import TodoMain from "./components/todo/TodoMain";
 import FriendMain from "./components/friendsV2/FriendMain";
 import BoardInsertForm from "./components/boards/BoardInsertForm";
@@ -152,6 +151,7 @@ const App = () => {
             />
           </Routes>
         </BrowserRouter>
+        {/* <DisplayAds /> */}
         {/* 구글 애드센스 */}
         {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9665234618246720"
                 crossOrigin="anonymous"></script>
