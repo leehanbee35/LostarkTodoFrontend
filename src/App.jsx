@@ -18,6 +18,7 @@ import Board from "./components/boards/Board";
 import TodoMain from "./components/todo/TodoMain";
 import FriendMain from "./components/friendsV2/FriendMain";
 import BoardInsertForm from "./components/boards/BoardInsertForm";
+import GoogleAdvertise from "./utils/GoogleAdvertise";
 
 const App = () => {
   //Notification 관련
@@ -151,6 +152,13 @@ const App = () => {
             />
           </Routes>
         </BrowserRouter>
+        <GoogleAdvertise
+          client="ca-pub-9665234618246720"
+          slot="2191443590"
+          format="fluid"
+          responsive="true"
+          layoutKey="-fz+6a+19-cg+hh"
+        />
         {/* <DisplayAds /> */}
         {/* 구글 애드센스 */}
         {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9665234618246720"
