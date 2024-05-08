@@ -45,7 +45,7 @@ const GoogleAdvertise = ({
         overflowX: "auto",
         overflowY: "hidden",
         display: "block",
-        textAlign: "center",
+        textAlign: "center"
       }}
       data-ad-client={client}
       data-ad-slot={slot}
