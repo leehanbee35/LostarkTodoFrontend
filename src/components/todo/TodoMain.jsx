@@ -156,24 +156,10 @@ const TodoMain = ({ setIsLoading, showMessage }) => {
               />
             </div>
           </div>
-          <GoogleAdvertise
-            client="ca-pub-9665234618246720"
-            slot="9768920405"
-            format="auto"
-            responsive="true"
-            message="수직형 광고"
-          />
         </>
       ) : (
         <SignUpCharacters setIsLoading={setIsLoading} />
       )}
-      <GoogleAdvertise
-        client="ca-pub-9665234618246720"
-        slot="2191443590"
-        format="fluid"
-        responsive="true"
-        message="수평형 광고"
-      />
     </>
   );
 };
