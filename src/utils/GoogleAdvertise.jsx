@@ -7,6 +7,7 @@ const GoogleAdvertise = ({
   format = "",
   responsive = "",
   layoutKey = "",
+  message=""
 }) => {
   useEffect(() => {
     //production인 경우만 광고 요청
