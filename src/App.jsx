@@ -152,19 +152,6 @@ const App = () => {
             />
           </Routes>
         </BrowserRouter>
-        <GoogleAdvertise
-          client="ca-pub-9665234618246720"
-          slot="2191443590"
-          format="fluid"
-          responsive="true"
-        />
-        <GoogleAdvertise
-          client="ca-pub-9665234618246720"
-          slot="2736107186"
-          format="autorelaxed"
-          responsive="true"
-          message="그리드 광고"
-        />
         {/* <DisplayAds /> */}
         {/* 구글 애드센스 */}
         {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9665234618246720"

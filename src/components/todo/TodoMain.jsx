@@ -156,6 +156,19 @@ const TodoMain = ({ setIsLoading, showMessage }) => {
               />
             </div>
           </div>
+          <GoogleAdvertise
+            client="ca-pub-9665234618246720"
+            slot="2191443590"
+            format="fluid"
+            responsive="true"
+          />
+          <GoogleAdvertise
+            client="ca-pub-9665234618246720"
+            slot="2736107186"
+            format="autorelaxed"
+            responsive="true"
+            message="그리드 광고"
+          />
         </>
       ) : (
         <SignUpCharacters setIsLoading={setIsLoading} />
