@@ -3,6 +3,7 @@ import BoardList from "./BoardList";
 import PageNation from "../utils/PageNation";
 import BoardText from "./BoardText";
 import * as boards from "../../apis/boards";
+import GoogleAdvertise from "./utils/GoogleAdvertise";
 
 const BoardMain = ({ setIsLoading }) => {
   // state 설정

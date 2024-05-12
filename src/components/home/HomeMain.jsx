@@ -11,6 +11,7 @@ import Footer from "../../utils/Footer";
 import * as noticesApi from "../../apis/notices";
 import * as boardsApi from "../../apis/boards";
 import MainFriends from "./components/MainFriends";
+import GoogleAdvertise from "../../utils/GoogleAdvertise";
 
 const HomeMain = ({ showMessage, setIsLoading, isLoading }) => {
   const [characters, setChracters] = useState(homeData.charactersData);

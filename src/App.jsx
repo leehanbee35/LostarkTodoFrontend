@@ -18,7 +18,6 @@ import Board from "./components/boards/Board";
 import TodoMain from "./components/todo/TodoMain";
 import FriendMain from "./components/friendsV2/FriendMain";
 import BoardInsertForm from "./components/boards/BoardInsertForm";
-import GoogleAdvertise from "./utils/GoogleAdvertise";
 
 const App = () => {
   //Notification 관련

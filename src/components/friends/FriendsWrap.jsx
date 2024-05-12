@@ -18,6 +18,7 @@ import {
   Typography,
 } from "@mui/material";
 import PropTypes from "prop-types";
+import GoogleAdvertise from "./utils/GoogleAdvertise";
 
 //------------------------- 탭관련 -------------------------
 function CustomTabPanel(props) {
