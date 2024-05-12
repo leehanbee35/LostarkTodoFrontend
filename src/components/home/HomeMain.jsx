@@ -78,74 +78,77 @@ const HomeMain = ({ showMessage, setIsLoading, isLoading }) => {
   };
 
   return (
-    <div className="wrap">
-      <div className="home-wrap">
-        <div
-          className="home-content"
-          style={{
-            width: "100%",
-            backgroundColor: "black",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        ></div>
-        <div className="home-content">
-          {/*숙제 수익 요약*/}
-          <MainProfit
-            characters={characters}
-            weekTotalGold={weekTotalGold}
-            dayTotalGold={dayTotalGold}
-            isLoading={isLoading}
-          />
+    <>
+      <div className="wrap">
+        <div className="home-wrap">
+          <div
+            className="home-content"
+            style={{
+              width: "100%",
+              backgroundColor: "black",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          ></div>
+          <div className="home-content">
+            {/*숙제 수익 요약*/}
+            <MainProfit
+              characters={characters}
+              weekTotalGold={weekTotalGold}
+              dayTotalGold={dayTotalGold}
+              isLoading={isLoading}
+            />
 
-          {/*대표 캐릭터*/}
-          <MainCharacters
-            characters={characters}
-            mainCharacter={mainCharacter}
-            isLoading={isLoading}
-          />
-        </div>
-        <div className="home-content">
-          {/*레이드 별 현황*/}
-          {homeRaid !== null && (
-            <MainRaids homeRaid={homeRaid} isLoading={isLoading} />
-          )}
-        </div>
-        <div className="home-content">
-          {/*로스트아크, LoaTodo 공지사항*/}
-          <MainNotices
-            notices={notices}
-            boards={boards}
-            isLoading={isLoading}
-          />
+            {/*대표 캐릭터*/}
+            <MainCharacters
+              characters={characters}
+              mainCharacter={mainCharacter}
+              isLoading={isLoading}
+            />
+          </div>
+          <div className="home-content">
+            {/*레이드 별 현황*/}
+            {homeRaid !== null && (
+              <MainRaids homeRaid={homeRaid} isLoading={isLoading} />
+            )}
+          </div>
+          <div className="home-content">
+            {/*로스트아크, LoaTodo 공지사항*/}
+            <MainNotices
+              notices={notices}
+              boards={boards}
+              isLoading={isLoading}
+            />
 
-          {/*이번주 레이드 현황*/}
-          <MainWeekly isLoading={isLoading} />
+            {/*이번주 레이드 현황*/}
+            <MainWeekly isLoading={isLoading} />
+          </div>
+          <div className="home-content">
+            {/*깐부 일일 숙제 현황*/}
+            {friendsDayList !== null && (
+              <MainFriends
+                friendList={friendsDayList}
+                title={"깐부 주간 일일숙제 랭킹"}
+                isLoading={isLoading}
+              />
+            )}
+            {friendsDayList !== null && (
+              <MainFriends
+                friendList={friendsWeekList}
+                title={"깐부 주간 레이드 랭킹"}
+                isLoading={isLoading}
+              />
+            )}
+            {friendsDayList !== null && (
+              <MainFriends
+                friendList={friendsTotalList}
+                title={"깐부 주간 랭킹"}
+                isLoading={isLoading}
+              />
+            )}
+          </div>
         </div>
-        <div className="home-content">
-          {/*깐부 일일 숙제 현황*/}
-          {friendsDayList !== null && (
-            <MainFriends
-              friendList={friendsDayList}
-              title={"깐부 주간 일일숙제 랭킹"}
-              isLoading={isLoading}
-            />
-          )}
-          {friendsDayList !== null && (
-            <MainFriends
-              friendList={friendsWeekList}
-              title={"깐부 주간 레이드 랭킹"}
-              isLoading={isLoading}
-            />
-          )}
-          {friendsDayList !== null && (
-            <MainFriends
-              friendList={friendsTotalList}
-              title={"깐부 주간 랭킹"}
-              isLoading={isLoading}
-            />
-          )}
-        </div>
+        <Footer />
       </div>
       <GoogleAdvertise
         client="ca-pub-9665234618246720"
@@ -160,8 +163,7 @@ const HomeMain = ({ showMessage, setIsLoading, isLoading }) => {
         responsive="true"
         message="그리드 광고"
       />
-      <Footer />
-    </div>
+    </>
   );
 };
 
