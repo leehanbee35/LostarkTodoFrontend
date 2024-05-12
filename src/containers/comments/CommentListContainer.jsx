@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as comment from "../../apis/comments";
-import CommentList from "../../components/comments/CommentList";
-import PageNation from "../../components/utils/PageNation";
 import CommentWrap from "../../components/comments/CommentWrap";
-import GoogleAdvertise from "./utils/GoogleAdvertise";
+import GoogleAdvertise from "../../utils/GoogleAdvertise";
 
 // 방명록 리스트
 // 루트 코멘트 5개 + 답글 출력
