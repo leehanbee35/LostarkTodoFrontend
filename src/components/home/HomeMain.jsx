@@ -80,6 +80,24 @@ const HomeMain = ({ showMessage, setIsLoading, isLoading }) => {
   return (
     <>
       <div className="wrap">
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            background: "#666",
+            color: "white",
+            fontSize: "16px",
+            fontWeight: "bold",
+            maxWidth: "1200px",
+            borderRadius: "3px",
+            marginBottom: "5px",
+          }}
+        >
+          <a href="https://dev.loatodo.com" target="_black" style={{color:"white"}}>
+            개발중인 V2버전 보러가기
+          </a>
+        </div>
         <div className="home-wrap">
           <div
             className="home-content"
