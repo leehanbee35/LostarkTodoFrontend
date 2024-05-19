@@ -80,6 +80,14 @@ const HomeMain = ({ showMessage, setIsLoading, isLoading }) => {
   return (
     <>
       <div className="wrap">
+        <div style={{ width: "100%" }}>
+          <GoogleAdvertise
+            client="ca-pub-9665234618246720"
+            slot="2191443590"
+            format="horizontal"
+            responsive="false"
+          />
+        </div>
         <div
           style={{
             width: "100%",
@@ -94,7 +102,11 @@ const HomeMain = ({ showMessage, setIsLoading, isLoading }) => {
             marginBottom: "5px",
           }}
         >
-          <a href="https://dev.loatodo.com" target="_black" style={{color:"white"}}>
+          <a
+            href="https://dev.loatodo.com"
+            target="_black"
+            style={{ color: "white" }}
+          >
             개발중인 V2버전 보러가기
           </a>
         </div>
@@ -168,12 +180,6 @@ const HomeMain = ({ showMessage, setIsLoading, isLoading }) => {
         </div>
         <Footer />
       </div>
-      <GoogleAdvertise
-        client="ca-pub-9665234618246720"
-        slot="2191443590"
-        format="fluid"
-        responsive="true"
-      />
       <GoogleAdvertise
         client="ca-pub-9665234618246720"
         slot="2736107186"

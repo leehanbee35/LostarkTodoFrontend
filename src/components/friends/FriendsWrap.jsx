@@ -424,6 +424,14 @@ export default function FriendsWrap({ setIsLoading }) {
             friendUsername={friendUsername}
           />
           <div className="wrap">
+            <div style={{ width: "100%" }}>
+              <GoogleAdvertise
+                client="ca-pub-9665234618246720"
+                slot="2191443590"
+                format="horizontal"
+                responsive="false"
+              />
+            </div>
             <div class="input-txt">
               <TextField
                 id="find-character"
@@ -538,12 +546,6 @@ export default function FriendsWrap({ setIsLoading }) {
               </div>
             </Modal>
           </div>
-          <GoogleAdvertise
-            client="ca-pub-9665234618246720"
-            slot="2191443590"
-            format="fluid"
-            responsive="true"
-          />
           <GoogleAdvertise
             client="ca-pub-9665234618246720"
             slot="2736107186"

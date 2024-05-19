@@ -110,6 +110,14 @@ const TodoMain = ({ setIsLoading, showMessage }) => {
 
             {/*메인 화면*/}
             <div className="wrap">
+              <div style={{ width: "100%" }}>
+                <GoogleAdvertise
+                  client="ca-pub-9665234618246720"
+                  slot="2191443590"
+                  format="horizontal"
+                  responsive="false"
+                />
+              </div>
               {/*일일 수익, 주간수익*/}
               <TodoProfit characters={characters} />
 
@@ -156,12 +164,6 @@ const TodoMain = ({ setIsLoading, showMessage }) => {
               />
             </div>
           </div>
-          <GoogleAdvertise
-            client="ca-pub-9665234618246720"
-            slot="2191443590"
-            format="fluid"
-            responsive="true"
-          />
           <GoogleAdvertise
             client="ca-pub-9665234618246720"
             slot="2736107186"
