@@ -80,14 +80,6 @@ const HomeMain = ({ showMessage, setIsLoading, isLoading }) => {
   return (
     <>
       <div className="wrap">
-        <div style={{ width: "100%" }}>
-          <GoogleAdvertise
-            client="ca-pub-9665234618246720"
-            slot="2191443590"
-            format="horizontal"
-            responsive="false"
-          />
-        </div>
         <div
           style={{
             width: "100%",
