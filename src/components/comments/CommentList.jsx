@@ -24,14 +24,6 @@ const CommentList = ({
                 p.update - 개발 예정
                 p.modify - 수정 예정
             */}
-      <div style={{ width: "100%" }}>
-        <GoogleAdvertise
-          client="ca-pub-9665234618246720"
-          slot="2191443590"
-          format="horizontal"
-          responsive="false"
-        />
-      </div>
       <h2>
         방명록 <p>하고싶으신 말씀 자유롭게 남겨주세요!</p>
       </h2>
