@@ -10,6 +10,7 @@ import ModalBox from "../utils/ModalBox";
 import { calculateItemsPerRow } from "../utils/ResponsiveWeb";
 import SignUpCharacters from "../auth/SignUpCharacters";
 import GoogleAdvertise from "../../utils/GoogleAdvertise";
+import Notify from "../Notify";
 
 // 숙제 관리 화면 메인
 const TodoMain = ({ setIsLoading, showMessage }) => {
@@ -110,6 +111,7 @@ const TodoMain = ({ setIsLoading, showMessage }) => {
 
             {/*메인 화면*/}
             <div className="wrap">
+              <Notify />
               {/*일일 수익, 주간수익*/}
               <TodoProfit characters={characters} />
 

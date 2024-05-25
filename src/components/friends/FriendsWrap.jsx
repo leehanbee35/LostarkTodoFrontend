@@ -19,6 +19,7 @@ import {
 } from "@mui/material";
 import PropTypes from "prop-types";
 import GoogleAdvertise from "../../utils/GoogleAdvertise";
+import Notify from "../Notify";
 
 //------------------------- 탭관련 -------------------------
 function CustomTabPanel(props) {
@@ -424,6 +425,7 @@ export default function FriendsWrap({ setIsLoading }) {
             friendUsername={friendUsername}
           />
           <div className="wrap">
+            <Notify />
             <div class="input-txt">
               <TextField
                 id="find-character"
